@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInPage">
+
+    <fragment
+        android:id="@+id/signInPage"
+        android:name="com.zeroillusion.shopapp.ui.SignInPage"
+        android:label="fragment_sign_in_page"
+        tools:layout="@layout/fragment_sign_in_page" >
+        <action
+            android:id="@+id/action_signInPage_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_signInPage_to_page1"
+            app:destination="@id/page1"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.zeroillusion.shopapp.ui.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_page1"
+            app:destination="@id/page1"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.zeroillusion.shopapp.ui.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_signInPage"
+            app:destination="@id/signInPage"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/page1"
+        android:name="com.zeroillusion.shopapp.ui.Page1"
+        android:label="fragment_page1"
+        tools:layout="@layout/fragment_page1" />
+</navigation>

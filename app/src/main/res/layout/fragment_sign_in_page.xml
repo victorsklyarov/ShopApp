@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SignInPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="121dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Sign in"
+            android:textColor="#161826"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="289dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="229dp"
+            android:background="@drawable/edit_text"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:hint="First Name"
+            android:textColor="#7B7B7B"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="289dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="293dp"
+            android:background="@drawable/edit_text"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:hint="Last Name"
+            android:textColor="#7B7B7B"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="289dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="357dp"
+            android:background="@drawable/edit_text"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:hint="Email"
+            android:textColor="#7B7B7B"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/sign_in_btn"
+            style="@android:style/Widget.Button"
+            android:layout_width="289dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="421dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/montserrat"
+            android:text="Sign in"
+            android:textColor="#EAEAEA"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-144dp"
+            android:layout_marginTop="482dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="129dp"
+                android:layout_height="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Already have an account?"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/log_in_btn"
+                android:layout_width="35dp"
+                android:layout_height="16dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Log in"
+                android:textColor="#254FE6"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-101dp"
+            android:layout_marginTop="568dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_google" />
+
+            <TextView
+                android:layout_width="117dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="11dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Sign in with Google"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-101dp"
+            android:layout_marginTop="630dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_apple" />
+
+            <TextView
+                android:layout_width="111dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="11dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Sign in with Apple"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

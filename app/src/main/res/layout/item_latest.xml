@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
+
+    <ImageView
+        android:id="@+id/image_latest"
+        android:layout_width="114dp"
+        android:layout_height="149dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:clipToOutline="true"
+        tools:src="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="91dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:alpha="0.85"
+            android:background="@drawable/category_box"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/category_latest"
+            android:layout_width="22dp"
+            android:layout_height="8dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#070604"
+            android:textSize="6sp"
+            tools:text="Phones" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_latest"
+        android:layout_width="75dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="106dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Samsung S10" />
+
+    <TextView
+        android:id="@+id/price_latest"
+        android:layout_width="40dp"
+        android:layout_height="9dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="133dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$ 180,000" />
+
+    <ImageView
+        android:id="@+id/add_to_cart_btn_latest"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="124dp"
+        android:src="@drawable/ic_add_to_cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

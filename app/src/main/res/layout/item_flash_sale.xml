@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/image_flash"
+        android:layout_width="174dp"
+        android:layout_height="221dp"
+        tools:src="@color/purple_500"
+        android:background="@drawable/rounded_corners_big"
+        tools:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/seller"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/profile"
+        android:background="@drawable/ic_round"
+        tools:clipToOutline="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/poppins_semibold"
+        android:id="@+id/discount_flash"
+        android:layout_width="49dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/discount_box"
+        android:gravity="center"
+        tools:text="30% off"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/poppins_semibold"
+        android:id="@+id/category_flash"
+        android:layout_width="50dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="121dp"
+        android:background="@drawable/category_box"
+        android:gravity="center"
+        android:text="kids"
+        android:textSize="10sp"
+        android:textColor="#070604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/poppins_semibold"
+        android:id="@+id/name_flash"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="144dp"
+        tools:text="New balance sneakers"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/poppins_semibold"
+        android:id="@+id/price_flash"
+        android:layout_width="43dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="192dp"
+        tools:text="$ 33,00"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/liked_btn_flash_sale"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="183dp"
+        android:background="@drawable/ic_liked_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_to_cart_btn_flash_sale"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="179dp"
+        android:background="@drawable/ic_add_to_cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
