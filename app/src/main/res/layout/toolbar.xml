@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="wrap_content">
 
-    <Button
+    <ImageView
         android:id="@+id/btn_toolbar"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start"
+        android:contentDescription="@string/menu"
+        android:src="@drawable/ic_menu" />
 
     <TextView
         android:id="@+id/title_toolbar"
@@ -20,43 +23,33 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_gravity="end"
         android:layout_marginEnd="50dp"
-        android:layout_gravity="end">
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/image_toolbar"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_gravity="center"
             android:layout_margin="7dp"
             android:background="@drawable/ic_round"
-            tools:clipToOutline="true"
-            android:layout_gravity="center"
-            android:src="@drawable/profile" />
-        
-        <LinearLayout
+            android:contentDescription="@string/profile_image"
+            android:src="@drawable/profile"
+            tools:clipToOutline="true" />
+
+        <TextView
             android:id="@+id/location_toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppins"
-                android:textColor="#5B5B5B"
-                android:textSize="10sp"
-                android:text="Location" />
-
-            <ImageView
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="2dp"
-                android:src="@drawable/ic_bottom_arrow" />
-        </LinearLayout>
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/location"
+            android:textColor="#5B5B5B"
+            android:textSize="10sp"
+            app:drawableRightCompat="@drawable/ic_bottom_arrow" />
     </LinearLayout>
 
 </androidx.appcompat.widget.Toolbar>

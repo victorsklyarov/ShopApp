@@ -16,7 +16,7 @@
             android:layout_marginTop="123dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center"
-            android:text="Welcome back"
+            android:text="@string/welcome_back"
             android:textColor="#161826"
             android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,12 @@
             android:layout_width="289dp"
             android:layout_height="29dp"
             android:layout_marginTop="229dp"
+            android:autofillHints="name"
             android:background="@drawable/edit_text"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:hint="First name"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
             android:textColor="#7B7B7B"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,10 +52,12 @@
                 android:id="@+id/password_login"
                 android:layout_width="289dp"
                 android:layout_height="29dp"
+                android:autofillHints="password"
                 android:background="@drawable/edit_text"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
-                android:hint="Password"
+                android:hint="@string/password"
+                android:inputType="textPassword"
                 android:textColor="#7B7B7B"
                 android:textSize="11sp" />
 
@@ -62,6 +66,7 @@
                 android:layout_height="14dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="15dp"
+                android:contentDescription="@string/change_password_visibility"
                 android:src="@drawable/ic_password" />
         </FrameLayout>
 
@@ -73,7 +78,7 @@
             android:layout_marginTop="421dp"
             android:background="@drawable/button"
             android:fontFamily="@font/montserrat"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="#EAEAEA"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"

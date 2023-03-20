@@ -16,7 +16,7 @@
             android:layout_marginTop="121dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center"
-            android:text="Sign in"
+            android:text="@string/sign_in"
             android:textColor="#161826"
             android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,12 @@
             android:layout_width="289dp"
             android:layout_height="29dp"
             android:layout_marginTop="229dp"
+            android:autofillHints="name"
             android:background="@drawable/edit_text"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:hint="First Name"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
             android:textColor="#7B7B7B"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +45,12 @@
             android:layout_width="289dp"
             android:layout_height="29dp"
             android:layout_marginTop="293dp"
+            android:autofillHints="name"
             android:background="@drawable/edit_text"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:hint="Last Name"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
             android:textColor="#7B7B7B"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,10 +62,12 @@
             android:layout_width="289dp"
             android:layout_height="29dp"
             android:layout_marginTop="357dp"
+            android:autofillHints="emailAddress"
             android:background="@drawable/edit_text"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:hint="Email"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             android:textColor="#7B7B7B"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +82,7 @@
             android:layout_marginTop="421dp"
             android:background="@drawable/button"
             android:fontFamily="@font/montserrat"
-            android:text="Sign in"
+            android:text="@string/sign_in"
             android:textColor="#EAEAEA"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +102,7 @@
                 android:layout_width="129dp"
                 android:layout_height="16dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Already have an account?"
+                android:text="@string/already_have_an_account"
                 android:textSize="10sp" />
 
             <TextView
@@ -105,7 +111,7 @@
                 android:layout_height="16dp"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
-                android:text="Log in"
+                android:text="@string/login"
                 android:textColor="#254FE6"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -122,7 +128,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_google" />
+                android:src="@drawable/ic_google"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="117dp"
@@ -130,7 +137,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="11dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Sign in with Google"
+                android:text="@string/sign_in_with_google"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -147,7 +154,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_apple" />
+                android:src="@drawable/ic_apple"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="111dp"
@@ -155,7 +163,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="11dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Sign in with Apple"
+                android:text="@string/sign_in_with_apple"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>

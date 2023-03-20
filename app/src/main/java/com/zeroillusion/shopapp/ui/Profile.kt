@@ -5,12 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.zeroillusion.shopapp.R
-import com.zeroillusion.shopapp.databinding.FragmentPage1Binding
 import com.zeroillusion.shopapp.databinding.FragmentProfileBinding
 
 class Profile : Fragment() {

@@ -7,21 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.room.Room
 import com.zeroillusion.shopapp.R
-import com.zeroillusion.shopapp.dao.UserDao
-import com.zeroillusion.shopapp.data.Database
 import com.zeroillusion.shopapp.databinding.FragmentLoginBinding
+import com.zeroillusion.shopapp.utils.Auth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class Login : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private lateinit var userDao: UserDao
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,35 +25,27 @@ class Login : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        userDao = Room.databaseBuilder(
-            requireContext(),
-            Database::class.java, "database"
-        ).build().userDao()
-
         binding.loginBtn.setOnClickListener {
-            CoroutineScope(Dispatchers.Default).launch {
-                if (checkUser(binding.firstNameLogin.text.toString())) {
-                    requireActivity().runOnUiThread {
-                        findNavController().navigate(R.id.action_login_to_page1)
-                    }
-                } else {
-                    requireActivity().runOnUiThread {
-                        Toast.makeText(
-                            requireContext(),
-                            "Данный пользователь не существует",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-            }
+            loginBtn()
         }
         return binding.root
     }
 
-    private suspend fun checkUser(firstName: String): Boolean {
-        val user = withContext(Dispatchers.IO) {
-            userDao.checkUser(firstName)
+    private fun loginBtn() {
+        CoroutineScope(Dispatchers.Default).launch {
+            if (Auth(requireContext()).login(binding.firstNameLogin.text.toString(), "")) {
+                requireActivity().runOnUiThread {
+                    findNavController().navigate(R.id.action_login_to_page1)
+                }
+            } else {
+                requireActivity().runOnUiThread {
+                    Toast.makeText(
+                        requireContext(),
+                        resources.getString(R.string.error_user_not_found),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
         }
-        return user != null
     }
 }

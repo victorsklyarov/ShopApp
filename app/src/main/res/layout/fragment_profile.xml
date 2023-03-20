@@ -25,7 +25,7 @@
             android:layout_marginTop="33dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textColor="#000000"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
             android:layout_marginTop="133dp"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:text="Change photo"
+            android:text="@string/change_photo"
             android:textColor="#808080"
             android:textSize="8sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +84,7 @@
                 android:layout_width="290dp"
                 android:layout_height="40dp"
                 android:background="@drawable/button"
-                android:contentDescription="Upload item" />
+                android:contentDescription="@string/upload_item" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:gravity="center"
-                    android:text="Upload item"
+                    android:text="@string/upload_item"
                     android:textColor="#EAEAEA"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -145,7 +145,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Trade store"
+                android:text="@string/trade_store"
                 android:textColor="#040402"
                 android:textSize="14sp" />
 
@@ -188,7 +188,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Payment method"
+                android:text="@string/payment_method"
                 android:textColor="#040402"
                 android:textSize="14sp" />
 
@@ -231,7 +231,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Balance"
+                android:text="@string/balance"
                 android:textColor="#040402"
                 android:textSize="14sp" />
 
@@ -277,7 +277,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Trade history"
+                android:text="@string/trade_history"
                 android:textColor="#040402"
                 android:textSize="14sp" />
 
@@ -320,7 +320,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Restore Purchase"
+                android:text="@string/restore_purchase"
                 android:textColor="#040402"
                 android:textSize="14sp" />
 
@@ -363,7 +363,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Help"
+                android:text="@string/help"
                 android:textColor="#040402"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -401,7 +401,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
-                android:text="Log out"
+                android:text="@string/log_out"
                 android:textColor="#040402"
                 android:textSize="14sp" />
         </LinearLayout>

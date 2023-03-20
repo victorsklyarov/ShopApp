@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">ShopApp</string>
+
+    <string name="category_phones">Phones</string>
+    <string name="category_headphones">Headphones</string>
+    <string name="category_games">Games</string>
+    <string name="category_cars">Cars</string>
+    <string name="category_furniture">Furniture</string>
+    <string name="category_kids">Kids</string>
+
+    <string name="block_latest">Latest</string>
+    <string name="block_flash_sale">Flash Sale</string>
+    <string name="block_brands">Brands</string>
+
+    <string name="error_user_not_found">This user does not exist</string>
+    <string name="error_user_already_exist">User with given email address already exists</string>
+    <string name="error_valid_email">Please enter a valid email address</string>
+
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last Name</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_apple">Sign in with Apple</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="view_all">View all</string>
+    <string name="location">Location</string>
+    <string name="profile">Profile</string>
+    <string name="change_photo">Change photo</string>
+    <string name="upload_item">Upload item</string>
+    <string name="trade_store">Trade store</string>
+    <string name="payment_method">Payment method</string>
+    <string name="balance">Balance</string>
+    <string name="trade_history">Trade history</string>
+    <string name="restore_purchase">Restore Purchase</string>
+    <string name="help">Help</string>
+    <string name="log_out">Log out</string>
+    <string name="change_password_visibility">Change password visibility</string>
+    <string name="profile_image">Profile image</string>
+    <string name="product_image">Product Image</string>
+    <string name="add_to_cart_button">Add to cart button</string>
+    <string name="add_to_favorites_button">Add to favorites button</string>
+    <string name="seller_image">Seller image</string>
+    <string name="menu">Menu</string>
 </resources>

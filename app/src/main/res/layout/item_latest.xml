@@ -11,6 +11,7 @@
         android:layout_width="114dp"
         android:layout_height="149dp"
         android:background="@drawable/rounded_corners"
+        android:contentDescription="@string/product_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +78,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="89dp"
         android:layout_marginTop="124dp"
+        android:contentDescription="@string/add_to_cart_button"
         android:src="@drawable/ic_add_to_cart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

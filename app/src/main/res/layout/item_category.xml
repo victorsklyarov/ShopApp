@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -12,17 +12,19 @@
         android:layout_gravity="center">
 
         <ImageView
-            android:layout_centerInParent="true"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            tools:src="@drawable/ic_round"/>
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_round" />
 
         <ImageView
             android:id="@+id/image_category"
-            android:layout_centerInParent="true"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            tools:src="@drawable/ic_phone"/>
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_phone" />
     </RelativeLayout>
 
     <TextView
@@ -32,6 +34,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="11dp"
         android:textSize="8sp"
-        tools:text="Phones"/>
+        tools:text="Phones" />
 
 </LinearLayout>
