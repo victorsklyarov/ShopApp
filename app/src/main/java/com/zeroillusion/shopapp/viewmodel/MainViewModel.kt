@@ -11,8 +11,6 @@ import java.net.UnknownHostException
 class MainViewModel constructor(private val mainRepository: MainRepository) : ViewModel() {
 
     val errorMessage = MutableLiveData<String>()
-    //val latestList = MutableLiveData<List<Latest>>()
-    //val flashSaleList = MutableLiveData<List<FlashSale>>()
     var job: Job? = null
     val loading = MutableLiveData<Boolean>()
 
@@ -27,8 +25,6 @@ class MainViewModel constructor(private val mainRepository: MainRepository) : Vi
                 val responseFlashSale = mainRepository.getFlashSale()
                 withContext(Dispatchers.Main) {
                     if ((responseLatest.isSuccessful) and (responseFlashSale.isSuccessful)) {
-                        //latestList.postValue(responseLatest.body()!!.latestList)
-                        //flashSaleList.postValue(responseFlashSale.body()!!.flashSaleList)
                         displayableItems.add(BlockLatest("Latest", responseLatest.body()!!.latestList))
                         displayableItems.add(BlockFlashSale("Flash Sale", responseFlashSale.body()!!.flashSaleList))
                         displayableItems.add(BlockLatest("Brands", responseLatest.body()!!.latestList))
@@ -51,6 +47,13 @@ class MainViewModel constructor(private val mainRepository: MainRepository) : Vi
 
     fun setCategory(categoryList: ArrayList<DisplayableItem>){
         _categoryItems.postValue(categoryList)
+    }
+
+    private val _profilePhoto = MutableLiveData<String?>()
+    val profilePhoto: LiveData<String?> = _profilePhoto
+
+    fun setProfilePhoto(photo: String){
+        _profilePhoto.postValue(photo)
     }
 
     private fun onError(message: String) {

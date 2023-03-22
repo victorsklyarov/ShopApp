@@ -1,12 +1,13 @@
 package com.zeroillusion.shopapp.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ import com.zeroillusion.shopapp.api.ApiService
 import com.zeroillusion.shopapp.databinding.FragmentPage1Binding
 import com.zeroillusion.shopapp.model.Category
 import com.zeroillusion.shopapp.repository.MainRepository
+import com.zeroillusion.shopapp.utils.decodeBase64
 import com.zeroillusion.shopapp.viewmodel.MainViewModel
 import com.zeroillusion.shopapp.viewmodel.ViewModelFactory
 
@@ -26,21 +28,18 @@ class Page1 : Fragment() {
 
     private var _binding: FragmentPage1Binding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by activityViewModels() {
+        ViewModelFactory(
+            MainRepository(ApiService.getInstance())
+        )
+    }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPage1Binding.inflate(inflater, container, false)
-
-        val apiService = ApiService.getInstance()
-        val mainRepository = MainRepository(apiService)
-
-        viewModel = ViewModelProvider(
-            this,
-            ViewModelFactory(mainRepository)
-        )[MainViewModel::class.java]
 
         viewModel.errorMessage.observe(viewLifecycleOwner) {
             Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
@@ -59,16 +58,25 @@ class Page1 : Fragment() {
             flashSaleListAdapterDelegate()
         )
 
+        viewModel.profilePhoto.observe(viewLifecycleOwner) {
+            binding.toolbar.imageToolbar.setImageBitmap(it?.let { itNotNull ->
+                decodeBase64(itNotNull)
+            })
+        }
+
         binding.toolbar.imageToolbar.clipToOutline = true
 
         viewModel.setCategory(
             arrayListOf(
-                    Category(resources.getString(R.string.category_phones), R.drawable.ic_phone),
-                    Category(resources.getString(R.string.category_headphones), R.drawable.ic_headphone),
-                    Category(resources.getString(R.string.category_games), R.drawable.ic_game),
-                    Category(resources.getString(R.string.category_cars), R.drawable.ic_car),
-                    Category(resources.getString(R.string.category_furniture), R.drawable.ic_furniture),
-                    Category(resources.getString(R.string.category_kids), R.drawable.ic_kids)
+                Category(resources.getString(R.string.category_phones), R.drawable.ic_phone),
+                Category(
+                    resources.getString(R.string.category_headphones),
+                    R.drawable.ic_headphone
+                ),
+                Category(resources.getString(R.string.category_games), R.drawable.ic_game),
+                Category(resources.getString(R.string.category_cars), R.drawable.ic_car),
+                Category(resources.getString(R.string.category_furniture), R.drawable.ic_furniture),
+                Category(resources.getString(R.string.category_kids), R.drawable.ic_kids)
             )
         )
 
