@@ -18,8 +18,9 @@
 
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="log_in">Log in</string>
     <string name="first_name">First name</string>
-    <string name="last_name">Last Name</string>
+    <string name="last_name">Last name</string>
     <string name="sign_in">Sign in</string>
     <string name="email">Email</string>
     <string name="sign_in_with_google">Sign in with Google</string>
@@ -46,4 +47,7 @@
     <string name="add_to_favorites_button">Add to favorites button</string>
     <string name="seller_image">Seller image</string>
     <string name="menu">Menu</string>
+    <string name="saved_image_key">SAVED_IMAGE_KEY</string>
+    <string name="saved_session_key">SAVED_SESSION_KEY</string>
+    <string name="preference_file_key">com.zeroillusion.shopapp.PREFERENCE_FILE_KEY</string>
 </resources>

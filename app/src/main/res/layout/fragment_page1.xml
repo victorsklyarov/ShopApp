@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Page1">
+    tools:context=".ui.Page1"
+    android:background="@color/background">
 
     <include
         android:id="@+id/toolbar"
@@ -14,16 +15,16 @@
         android:id="@+id/search_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="9dp"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <EditText
             android:id="@+id/search"
-            android:layout_width="262dp"
+            android:layout_width="250dp"
             android:layout_height="24dp"
-            android:background="@drawable/edit_text"
+            android:background="@drawable/search"
             android:fontFamily="@font/poppins"
             android:gravity="center"
             android:hint="@string/what_are_you_looking_for"
@@ -33,8 +34,8 @@
             android:textSize="9sp" />
 
         <ImageView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:layout_gravity="end|center_vertical"
             android:layout_marginEnd="18dp"
             android:src="@drawable/ic_search" />

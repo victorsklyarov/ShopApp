@@ -1,5 +1,7 @@
 package com.zeroillusion.shopapp.ui
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,11 +21,21 @@ class SignInPage : Fragment() {
     private var _binding: FragmentSignInPageBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var sharedPref: SharedPreferences
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSignInPageBinding.inflate(inflater, container, false)
+
+        sharedPref = activity?.getSharedPreferences(
+            getString(R.string.preference_file_key), Context.MODE_PRIVATE)!!
+
+        val checkLogin = sharedPref.getInt(getString(R.string.saved_session_key), 0)
+        if (checkLogin == 1){
+            findNavController().navigate(R.id.action_signInPage_to_page1)
+        }
 
         binding.logInBtn.setOnClickListener {
             findNavController().navigate(R.id.action_signInPage_to_login)
@@ -49,6 +61,10 @@ class SignInPage : Fragment() {
                         binding.firstName.text.clear()
                         binding.lastName.text.clear()
                         binding.email.text.clear()
+                        with (sharedPref.edit()) {
+                            putInt(getString(R.string.saved_session_key), 1)
+                            apply()
+                        }
                         findNavController().navigate(R.id.action_signInPage_to_page1)
                     }
                 }

@@ -12,10 +12,21 @@ import java.io.ByteArrayOutputStream
 
 @Suppress("DEPRECATION")
 fun encodeBase64(fragment: Fragment, imageUri: Uri): String {
-    val bitmap = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+    val bitmapOriginal = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
         ImageDecoder.decodeBitmap(ImageDecoder.createSource(fragment.requireContext().contentResolver, imageUri))
     } else {
         MediaStore.Images.Media.getBitmap(fragment.requireContext().contentResolver, imageUri)
+    }
+    val bitmap = if (bitmapOriginal.width >= bitmapOriginal.height){
+        Bitmap.createBitmap(
+            bitmapOriginal, bitmapOriginal.width /2 - bitmapOriginal.height /2, 0,
+            bitmapOriginal.height, bitmapOriginal.height
+        )
+    }else{
+        Bitmap.createBitmap(
+            bitmapOriginal, 0, bitmapOriginal.height /2 - bitmapOriginal.width /2,
+            bitmapOriginal.width, bitmapOriginal.width
+        )
     }
     val stream = ByteArrayOutputStream()
     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream) // bm is the bitmap object

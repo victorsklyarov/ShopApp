@@ -12,29 +12,29 @@
 
         <TextView
             android:layout_width="150dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="121dp"
-            android:fontFamily="@font/montserrat_medium"
+            android:layout_height="50dp"
+            android:layout_marginTop="98dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:gravity="center"
             android:text="@string/sign_in"
-            android:textColor="#161826"
-            android:textSize="26sp"
+            android:textColor="@color/title"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/first_name"
-            android:layout_width="289dp"
-            android:layout_height="29dp"
-            android:layout_marginTop="229dp"
+            android:layout_width="280dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="212dp"
             android:autofillHints="name"
             android:background="@drawable/edit_text"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/montserrat_medium"
             android:gravity="center"
             android:hint="@string/first_name"
             android:inputType="textPersonName"
-            android:textColor="#7B7B7B"
+            android:textColor="@color/edit_text"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,16 +42,16 @@
 
         <EditText
             android:id="@+id/last_name"
-            android:layout_width="289dp"
-            android:layout_height="29dp"
-            android:layout_marginTop="293dp"
+            android:layout_width="280dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="274dp"
             android:autofillHints="name"
             android:background="@drawable/edit_text"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/montserrat_medium"
             android:gravity="center"
             android:hint="@string/last_name"
             android:inputType="textPersonName"
-            android:textColor="#7B7B7B"
+            android:textColor="@color/edit_text"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,16 +59,16 @@
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="289dp"
-            android:layout_height="29dp"
-            android:layout_marginTop="357dp"
+            android:layout_width="280dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="335dp"
             android:autofillHints="emailAddress"
             android:background="@drawable/edit_text"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/montserrat_medium"
             android:gravity="center"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:textColor="#7B7B7B"
+            android:textColor="@color/edit_text"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,13 +77,13 @@
         <Button
             android:id="@+id/sign_in_btn"
             style="@android:style/Widget.Button"
-            android:layout_width="289dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="421dp"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="396dp"
             android:background="@drawable/button"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="@string/sign_in"
-            android:textColor="#EAEAEA"
+            android:textColor="@color/button_text"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,17 +92,18 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-144dp"
-            android:layout_marginTop="482dp"
+            android:layout_marginStart="-140dp"
+            android:layout_marginTop="454dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="129dp"
+                android:layout_width="132dp"
                 android:layout_height="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/already_have_an_account"
+                android:textColor="@color/text_little"
                 android:textSize="10sp" />
 
             <TextView
@@ -111,62 +112,42 @@
                 android:layout_height="16dp"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
-                android:text="@string/login"
-                android:textColor="#254FE6"
+                android:text="@string/log_in"
+                android:textColor="@color/hypertext"
                 android:textSize="10sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-101dp"
-            android:layout_marginTop="568dp"
-            android:orientation="horizontal"
+        <TextView
+            android:layout_width="152dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="-86dp"
+            android:layout_marginTop="538dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/sign_in_with_google"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:drawableLeftCompat="@drawable/ic_google"
             app:layout_constraintStart_toStartOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_google"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:layout_width="117dp"
-                android:layout_height="16dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="11dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/sign_in_with_google"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-101dp"
-            android:layout_marginTop="630dp"
-            android:orientation="horizontal"
+        <TextView
+            android:layout_width="143dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="-85dp"
+            android:layout_marginTop="596dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/sign_in_with_apple"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:drawableLeftCompat="@drawable/ic_apple"
             app:layout_constraintStart_toStartOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_apple"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:layout_width="111dp"
-                android:layout_height="16dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="11dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/sign_in_with_apple"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-        </LinearLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"

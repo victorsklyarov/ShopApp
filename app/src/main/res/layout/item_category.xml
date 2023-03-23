@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="9dp"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -16,7 +16,7 @@
             android:layout_height="40dp"
             android:layout_centerInParent="true"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/ic_round" />
+            android:src="@drawable/ic_round" />
 
         <ImageView
             android:id="@+id/image_category"

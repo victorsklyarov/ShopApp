@@ -1,5 +1,9 @@
 package com.zeroillusion.shopapp.ui
 
+import android.content.ContentResolver
+import android.content.Context
+import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,11 +33,16 @@ class Profile : Fragment() {
         )
     }
 
+    private lateinit var sharedPref: SharedPreferences
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
+
+        sharedPref = activity?.getSharedPreferences(
+            getString(R.string.preference_file_key), Context.MODE_PRIVATE)!!
 
         viewModel.profilePhoto.observe(viewLifecycleOwner) {
             binding.imageProfile.setImageBitmap(it?.let { itNotNull -> decodeBase64(itNotNull) })
@@ -43,6 +52,10 @@ class Profile : Fragment() {
             registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
                 if (uri != null) {
                     viewModel.setProfilePhoto(encodeBase64(this, uri))
+                    with (sharedPref.edit()) {
+                        putString(getString(R.string.saved_image_key), encodeBase64(this@Profile, uri))
+                        apply()
+                    }
                 }
             }
 
@@ -52,7 +65,22 @@ class Profile : Fragment() {
             photoPickerLauncher.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
 
+        binding.leftArrowProfile.setOnClickListener {
+            findNavController().navigate(R.id.action_profile_to_page1)
+        }
+
         binding.logOut.setOnClickListener {
+            with (sharedPref.edit()) {
+                putInt(getString(R.string.saved_session_key), 0)
+                putString(getString(R.string.saved_image_key), "")
+                apply()
+            }
+            viewModel.setProfilePhoto(encodeBase64(this@Profile,
+                Uri.parse(
+                    ContentResolver.SCHEME_ANDROID_RESOURCE +
+                            "://${resources.getResourcePackageName(R.drawable.profile)}" +
+                            "/${resources.getResourceTypeName(R.drawable.profile)}" +
+                            "/${resources.getResourceEntryName(R.drawable.profile)}")))
             findNavController().navigate(R.id.action_profile_to_signInPage)
         }
 

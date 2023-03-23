@@ -8,21 +8,21 @@
         android:fillColor="@android:color/transparent"
         android:pathData="M7.292,16C7.669,16 7.974,15.68 7.974,15.286C7.974,14.891 7.669,14.571 7.292,14.571C6.915,14.571 6.61,14.891 6.61,15.286C6.61,15.68 6.915,16 7.292,16Z"
         android:strokeWidth="2"
-        android:strokeColor="@color/bottom_menu_color"
+        android:strokeColor="@color/item_bottom_menu"
         android:strokeLineCap="round"
         android:strokeLineJoin="round" />
     <path
         android:fillColor="@android:color/transparent"
         android:pathData="M14.792,16C15.169,16 15.474,15.68 15.474,15.286C15.474,14.891 15.169,14.571 14.792,14.571C14.415,14.571 14.11,14.891 14.11,15.286C14.11,15.68 14.415,16 14.792,16Z"
         android:strokeWidth="2"
-        android:strokeColor="@color/bottom_menu_color"
+        android:strokeColor="@color/item_bottom_menu"
         android:strokeLineCap="round"
         android:strokeLineJoin="round" />
     <path
         android:fillColor="@android:color/transparent"
         android:pathData="M1.837,1H4.565L6.392,10.564C6.454,10.893 6.625,11.189 6.874,11.399C7.124,11.609 7.435,11.721 7.755,11.714H14.383C14.703,11.721 15.015,11.609 15.264,11.399C15.513,11.189 15.684,10.893 15.746,10.564L16.837,4.571H5.246"
         android:strokeWidth="2"
-        android:strokeColor="@color/bottom_menu_color"
+        android:strokeColor="@color/item_bottom_menu"
         android:strokeLineCap="round"
         android:strokeLineJoin="round" />
 </vector>
