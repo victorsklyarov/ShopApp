@@ -1,2 +1,2 @@
 # ShopApp
-<img src="/media/Record_demo.gif" width="50%" height="50%"/>
+<img src="/media/Record_demo.gif" width="25%" height="25%"/>
