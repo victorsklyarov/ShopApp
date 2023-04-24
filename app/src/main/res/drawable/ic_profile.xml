@@ -8,14 +8,14 @@
         android:fillColor="@android:color/transparent"
         android:pathData="M16,16V14.333C16,13.449 15.605,12.601 14.902,11.976C14.198,11.351 13.245,11 12.25,11H4.75C3.755,11 2.802,11.351 2.098,11.976C1.395,12.601 1,13.449 1,14.333V16"
         android:strokeWidth="2"
-        android:strokeColor="@color/item_bottom_menu"
+        android:strokeColor="#040402"
         android:strokeLineCap="round"
         android:strokeLineJoin="round" />
     <path
         android:fillColor="@android:color/transparent"
         android:pathData="M8.5,7.667C10.571,7.667 12.25,6.174 12.25,4.333C12.25,2.492 10.571,1 8.5,1C6.429,1 4.75,2.492 4.75,4.333C4.75,6.174 6.429,7.667 8.5,7.667Z"
         android:strokeWidth="2"
-        android:strokeColor="@color/item_bottom_menu"
+        android:strokeColor="#040402"
         android:strokeLineCap="round"
         android:strokeLineJoin="round" />
 </vector>
