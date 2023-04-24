@@ -2,7 +2,7 @@
 # ShopApp
 ShopApp is a demo multi-module Android application built according to the principles of Clean Architecture.
 
-##Libraries
+## Libraries
 The application uses the following libraries:
 
  - **Jetpack Compose:** For UI rendering
